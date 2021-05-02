@@ -1,5 +1,3 @@
-# alexghiti.github.io
-
 riscv XIP kernel
 ================
 
