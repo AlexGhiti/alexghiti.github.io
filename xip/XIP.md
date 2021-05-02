@@ -1,7 +1,7 @@
 # alexghiti.github.io
 
-riscv `XIP_KERNEL`
-==================
+riscv XIP kernel
+================
 
 At the moment, it was only tested on Microchip Polarfire SoC.
 
