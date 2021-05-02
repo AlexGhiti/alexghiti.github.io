@@ -29,13 +29,13 @@ Quick way
     Use the following command line (adapting the path):
 
     ```
-    $ qemu-system-riscv64                                               \
-        -M microchip-icicle-kit                                         \
-        -bios hart-software-services/Default/hss.bin                                \
-        -smp 5 -display none -nic user,model=cadence_gem -serial null                       \
-        -chardev socket,id=serial1,path=/tmp/serial1.sock,server -serial chardev:serial1            \
-        -drive if=sd,format=raw,file=core-image-minimal-dev-icicle-kit-es-sd-20210216171231.rootfs.wic.gz   \
-        -device loader,addr=0x21000000,file=arch/riscv/boot/xipImage                        \
+    $ qemu-system-riscv64                                               					\
+        -M microchip-icicle-kit                                         					\
+        -bios hart-software-services/Default/hss.bin                                				\
+        -smp 5 -display none -nic user,model=cadence_gem -serial null                       			\
+        -chardev socket,id=serial1,path=/tmp/serial1.sock,server -serial chardev:serial1            		\
+        -drive if=sd,format=raw,file=core-image-minimal-dev-icicle-kit-es-sd-20210216171231.rootfs.wic.gz   	\
+        -device loader,addr=0x21000000,file=arch/riscv/boot/xipImage                        			\
         -m 6G -D qemu.log -monitor stdio -s
     ```
     
