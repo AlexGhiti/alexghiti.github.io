@@ -20,6 +20,13 @@ Quick way
 
     Build using the config here: [ .config ](https://github.com/AlexGhiti/alexghiti.github.io/blob/main/xip/kernel/.config)
 
+    This can be derived from `defconfig` by using the following command:
+
+    ```
+    $ tuxmake --verbose --build-dir riscv_rv64_xipkernel --directory /home/alex/wip/linux --target-arch riscv --kconfig defconfig config --kconfig-add CONFIG_DEBUG_KERNEL=y --kconfig-add CONFIG_DEBUG_INFO=y --kconfig-add CONFIG_GDB_SCRIPTS=y --kconfig-add CONFIG_PCI=n --kconfig-add CONFIG_SPARSEMEM_MANUAL=y --kconfig-add CONFIG_DEBUG_VM_PGTABLE=n --kconfig-add CONFIG_XIP_KERNEL=y
+
+    ```
+
 4. Launching using qemu
 
     Support for Polarfire in qemu is recent, more instructions can be found here: [qemu Polarfire](https://wiki.qemu.org/Documentation/Platforms/RISCV#Microchip_PolarFire_SoC_Icicle_Kit)
